@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>One Page Website</title>
+    <link rel="stylesheet" href="./CSS/one_page_website.css">
+    <script src="./JS/one_page_website.js" defer></script>
 </head>
 <body>
 
@@ -23,11 +25,78 @@
     <!-- Images Section -->
     <section id="gallery" class="images">
         <h2>Image Gallery</h2>
-        <img src="Images/Thumb/thumbnail_1.jpg" alt="Sample Image 1" width='500' height='500'>
-        <img src="Images/Thumb/thumbnail_2.png" alt="Sample Image 2" width='800' height='800'>
+        
+        <!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="./Images/Pics/plant1-small.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="./Images/Pics/plant2-small.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="./Images/Pics/plant3-small.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="./Images/Pics/plant4-small.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="./Images/Pics/plant1.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="./Images/Pics/plant2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="./Images/Pics/plant3.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="./Images/Pics/plant4.png" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo cursor" src="./Images/Pics/plant1-small.png" style="width: 100%;" onclick="currentSlide(1)" alt="Pink Flowers">
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src="./Images/Pics/plant2-small.png" style="width: 100%;" onclick="currentSlide(2)" alt="Yellow Flowers">
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src="./Images/Pics/plant3-small.png" style="width: 100%;" onclick="currentSlide(3)" alt="Indoor Plants">
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src="./Images/Pics/plant4-small.png" style="width: 100%;" onclick="currentSlide(4)" alt="Indoor Plants">
+    </div>
+  </div>
+</div>
         
     </section>
-
+<!-- Image Gallery End -->
     <!-- Video Section -->
     <section id="video">
         <h2>HTML Video</h2>
